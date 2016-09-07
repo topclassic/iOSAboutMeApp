@@ -14,6 +14,8 @@
 		EE61BFFA1D8085BD004417E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE61BFF91D8085BD004417E9 /* Assets.xcassets */; };
 		EE61BFFD1D8085BD004417E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE61BFFB1D8085BD004417E9 /* LaunchScreen.storyboard */; };
 		EE61C0081D8095B4004417E9 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE61C0071D8095B4004417E9 /* Walkthrough.storyboard */; };
+		EE61C0141D809F33004417E9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61C0131D809F33004417E9 /* SWRevealViewController.m */; };
+		EE61C0161D80A0A5004417E9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61C0151D80A0A5004417E9 /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,10 @@
 		EE61BFFC1D8085BD004417E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE61BFFE1D8085BD004417E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE61C0071D8095B4004417E9 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		EE61C0111D809F32004417E9 /* iOSAboutMeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSAboutMeApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE61C0121D809F33004417E9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = iOSAboutMeApp/SWRevealViewController.h; sourceTree = "<group>"; };
+		EE61C0131D809F33004417E9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = iOSAboutMeApp/SWRevealViewController.m; sourceTree = "<group>"; };
+		EE61C0151D80A0A5004417E9 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		F8799F91F1F65059EF6800EE /* Pods_iOSAboutMeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSAboutMeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,6 +68,7 @@
 		EE61BFE61D8085BC004417E9 = {
 			isa = PBXGroup;
 			children = (
+				EE61C0101D809F07004417E9 /* SWReveal */,
 				EE61BFF11D8085BC004417E9 /* iOSAboutMeApp */,
 				EE61BFF01D8085BC004417E9 /* Products */,
 				E4158422846608D25B7FE719 /* Pods */,
@@ -87,8 +94,19 @@
 				EE61BFFB1D8085BD004417E9 /* LaunchScreen.storyboard */,
 				EE61BFFE1D8085BD004417E9 /* Info.plist */,
 				EE61C0071D8095B4004417E9 /* Walkthrough.storyboard */,
+				EE61C0151D80A0A5004417E9 /* ProfileTableViewController.swift */,
 			);
 			path = iOSAboutMeApp;
+			sourceTree = "<group>";
+		};
+		EE61C0101D809F07004417E9 /* SWReveal */ = {
+			isa = PBXGroup;
+			children = (
+				EE61C0121D809F33004417E9 /* SWRevealViewController.h */,
+				EE61C0131D809F33004417E9 /* SWRevealViewController.m */,
+				EE61C0111D809F32004417E9 /* iOSAboutMeApp-Bridging-Header.h */,
+			);
+			name = SWReveal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +235,8 @@
 			files = (
 				EE61BFF51D8085BD004417E9 /* ViewController.swift in Sources */,
 				EE61BFF31D8085BD004417E9 /* AppDelegate.swift in Sources */,
+				EE61C0161D80A0A5004417E9 /* ProfileTableViewController.swift in Sources */,
+				EE61C0141D809F33004417E9 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +350,7 @@
 			baseConfigurationReference = 284A2F268034D959AF793018 /* Pods-iOSAboutMeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSAboutMeApp/Info.plist;
@@ -337,6 +358,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.classic.iOSAboutMeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSAboutMeApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -345,6 +368,7 @@
 			baseConfigurationReference = 7406275A572D2FD49EB78E96 /* Pods-iOSAboutMeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSAboutMeApp/Info.plist;
@@ -352,6 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.classic.iOSAboutMeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSAboutMeApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
