@@ -16,6 +16,7 @@
 		EE61C0081D8095B4004417E9 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE61C0071D8095B4004417E9 /* Walkthrough.storyboard */; };
 		EE61C0141D809F33004417E9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61C0131D809F33004417E9 /* SWRevealViewController.m */; };
 		EE61C0161D80A0A5004417E9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61C0151D80A0A5004417E9 /* ProfileTableViewController.swift */; };
+		EE61C0181D80A367004417E9 /* MyAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61C0171D80A367004417E9 /* MyAppTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		EE61C0121D809F33004417E9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = iOSAboutMeApp/SWRevealViewController.h; sourceTree = "<group>"; };
 		EE61C0131D809F33004417E9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = iOSAboutMeApp/SWRevealViewController.m; sourceTree = "<group>"; };
 		EE61C0151D80A0A5004417E9 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		EE61C0171D80A367004417E9 /* MyAppTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppTableViewController.swift; sourceTree = "<group>"; };
 		F8799F91F1F65059EF6800EE /* Pods_iOSAboutMeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSAboutMeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				EE61BFFE1D8085BD004417E9 /* Info.plist */,
 				EE61C0071D8095B4004417E9 /* Walkthrough.storyboard */,
 				EE61C0151D80A0A5004417E9 /* ProfileTableViewController.swift */,
+				EE61C0171D80A367004417E9 /* MyAppTableViewController.swift */,
 			);
 			path = iOSAboutMeApp;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				EE61BFF31D8085BD004417E9 /* AppDelegate.swift in Sources */,
 				EE61C0161D80A0A5004417E9 /* ProfileTableViewController.swift in Sources */,
 				EE61C0141D809F33004417E9 /* SWRevealViewController.m in Sources */,
+				EE61C0181D80A367004417E9 /* MyAppTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

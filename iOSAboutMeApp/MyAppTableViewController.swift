@@ -1,5 +1,5 @@
 //
-//  ProfileTableViewController.swift
+//  MyAppTableViewController.swift
 //  iOSAboutMeApp
 //
 //  Created by Chotipat on 9/8/2559 BE.
@@ -9,6 +9,6 @@
 import Foundation
 import BWWalkthrough
 
-class ProfileTableViewController: UITableViewController, BWWalkthroughViewControllerDelegate {
+class MyAppTableViewController: UITableViewController, BWWalkthroughViewControllerDelegate {
     
 }
