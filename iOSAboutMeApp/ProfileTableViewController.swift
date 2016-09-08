@@ -11,9 +11,10 @@ import BWWalkthrough
 
 class ProfileTableViewController: UITableViewController, BWWalkthroughViewControllerDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
+    @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+     //   setTableViewBackgroundView()
     /*
         // Get view controllers and build the walkthrough
         let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
@@ -81,5 +82,24 @@ class ProfileTableViewController: UITableViewController, BWWalkthroughViewContro
     
     func walkthroughCloseButtonPressed() {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    func setTableViewBackgroundView(){
+        let height: CGFloat = UIScreen.mainScreen().bounds.height
+        var backgroundImage : UIImage?
+        switch height {
+        case 667: //iPhone 6, 6s
+            backgroundImage = UIImage(named: "backgroundcode")
+            break
+        case 736: //iPhone 6 Plus, 6s Plus
+            backgroundImage = UIImage(named: "backgroundcode")
+            break
+        case 568: //5, 5s, SE
+            backgroundImage = UIImage(named: "backgroundcode")
+            break
+        default: //iPhone 4, 4s
+            backgroundImage = UIImage(named: "backgroundcode")
+            break
+        }
+        tableview.backgroundView = UIImageView(image: backgroundImage)
     }
 }

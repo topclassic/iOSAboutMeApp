@@ -153,7 +153,7 @@
 				TargetAttributes = {
 					EE61BFEE1D8085BC004417E9 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = GDLT6CW827;
+						DevelopmentTeam = 9MF88L22LR;
 					};
 				};
 			};
@@ -367,7 +367,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSAboutMeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.classic.iOSAboutMeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.topclassic.iOSAboutMeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSAboutMeApp-Bridging-Header.h";
@@ -385,7 +385,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSAboutMeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.classic.iOSAboutMeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.topclassic.iOSAboutMeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSAboutMeApp-Bridging-Header.h";
