@@ -67,7 +67,7 @@ import UIKit
     @IBOutlet public var nextButton:UIButton?
     @IBOutlet public var prevButton:UIButton?
     @IBOutlet public var closeButton:UIButton?
-    @IBOutlet public var titlelabel:UILabel?
+
     
     public var currentPage:Int{    // The index of the current page (readonly)
         get{

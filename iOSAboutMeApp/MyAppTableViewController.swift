@@ -10,5 +10,15 @@ import Foundation
 import BWWalkthrough
 
 class MyAppTableViewController: UITableViewController, BWWalkthroughViewControllerDelegate {
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    // side bar menu
+        if revealViewController() != nil{
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        }
+    }
 }

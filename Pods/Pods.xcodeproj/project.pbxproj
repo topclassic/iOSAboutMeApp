@@ -918,6 +918,7 @@
 		DD0E1100BC540C93ABB97AEC3B31D070 /* RealmSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E5E7FC3BDAECEC2AEF562B96FB3928B0 /* TOWebViewController */,
 				8CBD6A6266BD92AF0879A1B88AA5D7D5 /* Aliases.swift */,
 				C626F83753F578AD897014AC41024A71 /* Error.swift */,
 				EC2A90E0DFE68E54A891A7B0C4CECC04 /* LinkingObjects.swift */,
@@ -946,7 +947,8 @@
 				36011D7EFA252A0BA723E531A1A672DA /* Core */,
 				8D9D38ECF47DBD2F332FE76DB68B772F /* Support Files */,
 			);
-			path = TOWebViewController;
+			name = TOWebViewController;
+			path = ../TOWebViewController;
 			sourceTree = "<group>";
 		};
 		EC717CFD95051160E044D204912D92F3 /* Pods */ = {
@@ -957,7 +959,6 @@
 				377FF6BE15EA2CEE788E56392F6F96BF /* RealmSearchViewController */,
 				DD0E1100BC540C93ABB97AEC3B31D070 /* RealmSwift */,
 				5C76C10DB60AFB6483E2A593E54F303B /* RealmSwiftBlogData */,
-				E5E7FC3BDAECEC2AEF562B96FB3928B0 /* TOWebViewController */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
