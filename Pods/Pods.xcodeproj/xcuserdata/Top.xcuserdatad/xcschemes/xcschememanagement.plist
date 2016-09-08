@@ -19,10 +19,65 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSearchViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwiftBlogData.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TOWebViewController-TOWebViewControllerLocalizable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TOWebViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>165E96FA67E22D3385C23BABEFF5B7B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>17664F8F0232329D875EC690EB653867</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>207C1601057E69A3BCEB3FC212918F3B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6AA55AF626D41EAFE04DEEF6160B104D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76141E9F3D1E401A78A3C5E6FA00F3C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F67B165D45251198AFD72EEBA5A7903</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5F1F75363557F8DEF7798B103F4ED6A</key>
+		<key>ABC062E45992639DF6BACD19E7A39A93</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B18687E4C13361C42DE4536D5C5CCDD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

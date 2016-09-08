@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Profile-->
         <scene sceneID="9yq-0T-aUo">
             <objects>
-                <tableViewController id="1C7-PH-tEJ" customClass="ProfileTableViewController" customModule="iOSAboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Profile" id="1C7-PH-tEJ" customClass="ProfileTableViewController" customModule="iOSAboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nE1-SA-DfF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="-136" y="379"/>
         </scene>
-        <!--Root View Controller-->
+        <!--MyApp-->
         <scene sceneID="YlZ-ca-GFG">
             <objects>
-                <tableViewController id="U8m-C3-cr7" customClass="MyAppTableViewController" customModule="iOSAboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="MyApp" id="U8m-C3-cr7" customClass="MyAppTableViewController" customModule="iOSAboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oGX-sP-foj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

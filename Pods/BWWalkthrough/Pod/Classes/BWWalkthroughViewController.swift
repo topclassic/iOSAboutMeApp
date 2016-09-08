@@ -1,36 +1,36 @@
 /*
-The MIT License (MIT)
-
-Copyright (c) 2015 Yari D'areglia @bitwaker
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
+ The MIT License (MIT)
+ 
+ Copyright (c) 2015 Yari D'areglia @bitwaker
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ */
 
 import UIKit
 
 // MARK: - Protocols -
 
 /**
-Walkthrough Delegate:
-This delegate performs basic operations such as dismissing the Walkthrough or call whatever action on page change.
-Probably the Walkthrough is presented by this delegate.
-**/
+ Walkthrough Delegate:
+ This delegate performs basic operations such as dismissing the Walkthrough or call whatever action on page change.
+ Probably the Walkthrough is presented by this delegate.
+ **/
 
 @objc public protocol BWWalkthroughViewControllerDelegate{
     
@@ -38,14 +38,14 @@ Probably the Walkthrough is presented by this delegate.
     @objc optional func walkthroughNextButtonPressed()               //
     @objc optional func walkthroughPrevButtonPressed()               //
     @objc optional func walkthroughPageDidChange(pageNumber:Int)     // Called when current page changes
-
+    
 }
 
-/** 
-Walkthrough Page:
-The walkthrough page represents any page added to the Walkthrough.
-At the moment it's only used to perform custom animations on didScroll.
-**/
+/**
+ Walkthrough Page:
+ The walkthrough page represents any page added to the Walkthrough.
+ At the moment it's only used to perform custom animations on didScroll.
+ **/
 @objc public protocol BWWalkthroughPage{
     // While sliding to the "next" slide (from right to left), the "current" slide changes its offset from 1.0 to 2.0 while the "next" slide changes it from 0.0 to 1.0
     // While sliding to the "previous" slide (left to right), the current slide changes its offset from 1.0 to 0.0 while the "previous" slide changes it from 2.0 to 1.0
@@ -67,6 +67,7 @@ At the moment it's only used to perform custom animations on didScroll.
     @IBOutlet public var nextButton:UIButton?
     @IBOutlet public var prevButton:UIButton?
     @IBOutlet public var closeButton:UIButton?
+    @IBOutlet public var titlelabel:UILabel?
     
     public var currentPage:Int{    // The index of the current page (readonly)
         get{
@@ -141,6 +142,8 @@ At the moment it's only used to perform custom animations on didScroll.
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         
+        updateUI()
+        
         pageControl?.numberOfPages = controllers.count
         pageControl?.currentPage = 0
     }
@@ -175,7 +178,7 @@ At the moment it's only used to perform custom animations on didScroll.
     }
     
     func pageControlDidTouch(){
-
+        
         if let pc = pageControl{
             gotoPage(pc.currentPage)
         }
@@ -191,10 +194,10 @@ At the moment it's only used to perform custom animations on didScroll.
     }
     
     /**
-    addViewController
-    Add a new page to the walkthrough. 
-    To have information about the current position of the page in the walkthrough add a UIVIewController which implements BWWalkthroughPage    
-    */
+     addViewController
+     Add a new page to the walkthrough.
+     To have information about the current position of the page in the walkthrough add a UIVIewController which implements BWWalkthroughPage
+     */
     public func addViewController(vc:UIViewController)->Void{
         
         controllers.append(vc)
@@ -235,10 +238,10 @@ At the moment it's only used to perform custom animations on didScroll.
             scrollview.addConstraints(lastViewConstraint! as! [NSLayoutConstraint])
         }
     }
-
-    /** 
-    Update the UI to reflect the current walkthrough status
-    **/
+    
+    /**
+     Update the UI to reflect the current walkthrough status
+     **/
     
     private func updateUI(){
         
@@ -272,7 +275,7 @@ At the moment it's only used to perform custom animations on didScroll.
         for i in 0 ..< controllers.count {
             
             if let vc = controllers[i] as? BWWalkthroughPage{
-            
+                
                 let mx = ((scrollview.contentOffset.x + view.bounds.size.width) - (view.bounds.size.width * CGFloat(i))) / view.bounds.size.width
                 
                 // While sliding to the "next" slide (from right to left), the "current" slide changes its offset from 1.0 to 2.0 while the "next" slide changes it from 0.0 to 1.0

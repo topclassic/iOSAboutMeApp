@@ -7,4 +7,8 @@ target 'iOSAboutMeApp' do
 
   # Pods for iOSAboutMeApp
 	pod 'BWWalkthrough'
+    pod 'RealmSwift', '~> 1.0'
+    pod 'RealmSearchViewController'
+    pod 'TOWebViewController'
+    pod 'RealmSwiftBlogData'
 end

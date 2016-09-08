@@ -1,12 +1,33 @@
 PODS:
   - BWWalkthrough (1.1.0)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
+  - RealmSearchViewController (2.1):
+    - RealmSwift (>= 1.0.0)
+  - RealmSwift (1.0.2):
+    - Realm (= 1.0.2)
+  - RealmSwiftBlogData (1.0):
+    - RealmSwift (>= 0.96)
+  - TOWebViewController (2.2.6):
+    - TOWebViewController/Core (= 2.2.6)
+  - TOWebViewController/Core (2.2.6)
 
 DEPENDENCIES:
   - BWWalkthrough
+  - RealmSearchViewController
+  - RealmSwift (~> 1.0)
+  - RealmSwiftBlogData
+  - TOWebViewController
 
 SPEC CHECKSUMS:
   BWWalkthrough: 0c27ad2773a25c8f4fb9004bc7d6685deb35fecc
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
+  RealmSearchViewController: 95cad63545b0dd77e06b59d45ba1e7e8255acd54
+  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
+  RealmSwiftBlogData: b9bac3c4a6dbe871eb6412e11c38557369063848
+  TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: 7890991df5e9c0b864a248a8aa8875b053212806
+PODFILE CHECKSUM: 55cd69deb08656b71f2b338078fe6de49528d979
 
 COCOAPODS: 1.1.0.beta.1

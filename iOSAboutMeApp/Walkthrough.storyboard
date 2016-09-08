@@ -35,7 +35,7 @@
         <!--walkthrough 2-->
         <scene sceneID="MaY-Ct-oWo">
             <objects>
-                <viewController storyboardIdentifier="walk2" title="walkthrough 2" id="D68-3O-d8T" customClass="BWWalkthroughPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk2" title="walkthrough 2" id="D68-3O-d8T" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oEo-OT-4og"/>
                         <viewControllerLayoutGuide type="bottom" id="vqt-W5-yUo"/>
@@ -62,7 +62,7 @@
         <!--walkthrough 3-->
         <scene sceneID="wZJ-Yh-Pq4">
             <objects>
-                <viewController storyboardIdentifier="walk3" title="walkthrough 3" id="yzI-dn-eMa" customClass="BWWalkthroughPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk3" title="walkthrough 3" id="yzI-dn-eMa" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7nS-P4-PaU"/>
                         <viewControllerLayoutGuide type="bottom" id="xbx-9D-7oC"/>
@@ -98,29 +98,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ElT-3A-CBV">
-                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Xtb-F0-f46">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nTw-Mv-2qb">
-                                            <rect key="frame" x="168" y="45" width="39" height="37"/>
-                                        </pageControl>
-                                    </subviews>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top Chotipat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho7-EL-au1">
                                 <rect key="frame" x="138" y="20" width="99" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mz8-CI-BEU">
+                                <rect key="frame" x="168" y="539" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pageControl" destination="mz8-CI-BEU" id="7kS-eh-Rbu"/>
+                        <outlet property="titlelabel" destination="ho7-EL-au1" id="Sex-cs-07k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIr-il-GMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
