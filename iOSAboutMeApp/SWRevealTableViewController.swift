@@ -10,14 +10,30 @@ import Foundation
 
 class SWRevealTableViewController: UITableViewController {
     
-    // change color
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundColor = UIColor.blackColor()
+        self.tableView.backgroundColor = Support().getUIColor(0)  // change color tableview
+        
     }
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = UIColor.clearColor()
+        cell.backgroundColor = UIColor.clearColor() // clear color cell
     }
-    // end change color
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.contentView.backgroundColor = Support().getUIColor(1)
+        if indexPath.row == 0{
+            selectedCell.contentView.backgroundColor = Support().getUIColor(0)
+        }
+    }
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.contentView.backgroundColor = Support().getUIColor(1)
+        if indexPath.row == 0{
+            selectedCell.contentView.backgroundColor = Support().getUIColor(0)
+        }
+    }
     
+
 }
