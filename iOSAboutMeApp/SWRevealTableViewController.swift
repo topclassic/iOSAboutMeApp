@@ -23,14 +23,14 @@ class SWRevealTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         selectedCell.contentView.backgroundColor = Support().getUIColor(1)
-        if indexPath.row == 0{
+        if indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 5{
             selectedCell.contentView.backgroundColor = Support().getUIColor(0)
         }
     }
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
         let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         selectedCell.contentView.backgroundColor = Support().getUIColor(1)
-        if indexPath.row == 0{
+        if indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 5{
             selectedCell.contentView.backgroundColor = Support().getUIColor(0)
         }
     }
