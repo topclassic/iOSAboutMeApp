@@ -6,17 +6,21 @@
 //  Copyright © 2559 Chotipat. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import JavaScriptCore
 import BWWalkthrough
-class ProfileWebviewViewController: UIViewController, UIWebViewDelegate, UIScrollViewDelegate,BWWalkthroughViewControllerDelegate{
-
+class ProfileWebviewViewController: UIViewController, UIScrollViewDelegate, UIWebViewDelegate,BWWalkthroughViewControllerDelegate {
+    
+    
     @IBOutlet weak var webview: UIWebView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
    // @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
+        navigationController?.navigationBar.translucent = false //Show Custom Bar
         super.viewDidLoad()
+        
+        setupMenuBar()
         // side bar menu
         if revealViewController() != nil{
             menuButton.target = revealViewController()
@@ -33,8 +37,18 @@ class ProfileWebviewViewController: UIViewController, UIWebViewDelegate, UIScrol
         let request = NSURLRequest(URL: url!)
         webview.loadRequest(request)
     }
-    
-    
+    // Set MenuBar
+    let menuBar: MenuBar = {
+        let mb = MenuBar()
+        return mb
+    }()
+    func setupMenuBar(){
+        view.addSubview(menuBar)
+        view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
+        view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar) // Set Height
+    }
+    // End Set MenuBar
+
   /*  func webViewDidStartLoad(webView: UIWebView) {
         activityIndicator.startAnimating()
     }
@@ -85,7 +99,15 @@ class ProfileWebviewViewController: UIViewController, UIWebViewDelegate, UIScrol
     func walkthroughPageDidChange(pageNumber: Int) {
         print("Current Page \(pageNumber)")
     }
-    
+    //Slide in
+    func handle(){
+        
+        let blackView = UIView()
+        blackView.backgroundColor = UIColor.blackColor()
+        view.addSubview(blackView)
+      //  blackView.frame
+        
+    }
     func walkthroughCloseButtonPressed() {
         self.dismissViewControllerAnimated(true, completion: nil)
     }

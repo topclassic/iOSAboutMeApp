@@ -9,11 +9,16 @@
 import Foundation
 import BWWalkthrough
 
-class HelpViewController: UIViewController, BWWalkthroughViewControllerDelegate {
+class HelpViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout  {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)// fix layout balance with tabbar
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)// fix scroll balance with tabbar
+        
+        setupMenuBar()
         /*
          // Get view controllers and build the walkthrough
          let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
@@ -39,6 +44,17 @@ class HelpViewController: UIViewController, BWWalkthroughViewControllerDelegate 
         }
         
     }
+    // Set MenuBar
+    let menuBar: MenuBar = {
+        let mb = MenuBar()
+        return mb
+    }()
+    func setupMenuBar(){
+        view.addSubview(menuBar)
+        view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
+        view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar) // Set Height
+    }
+    // End Set MenuBar
     
     
 }

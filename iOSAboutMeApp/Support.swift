@@ -6,11 +6,11 @@
 //  Copyright © 2559 Chotipat. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Support: NSObject {
 
-    // Select Color
+    // Set Color
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
@@ -19,6 +19,7 @@ class Support: NSObject {
             alpha: CGFloat(1.0)
         )
     }
+    // Select Color
     func getUIColor(i: Int) -> UIColor {
         var color : UIColor?
         switch i {
@@ -34,5 +35,17 @@ class Support: NSObject {
         }
         return color!
     }
-    //End Select Color
+}
+//Format Layout
+extension UIView {
+    func addConstraintsWithFormat(format: String, views: UIView...) {
+        var viewsDictionary = [String: UIView]()
+        for (index, view) in views.enumerate() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewsDictionary[key] = view
+        }
+        
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+    }
 }
