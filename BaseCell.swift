@@ -25,16 +25,18 @@ class BaseCell: UICollectionViewCell {
 class  MenuBarCell: BaseCell {
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "aboutme")
+        //iv.image = UIImage(named: "aboutme")
         return iv
     }()
     let labelView: UILabel = {
         let lv = UILabel()
+        lv.textColor = UIColor.whiteColor()
         return lv
     }()
     
     override func setupViews() {
         super.setupViews()
+        
         addSubview(labelView)
         addConstraintsWithFormat("H:[v0(28)]", views: labelView)
         addConstraintsWithFormat("V:[v0(28)]", views: labelView)

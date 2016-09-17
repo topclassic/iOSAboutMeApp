@@ -13,7 +13,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     lazy var collection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = Support().getUIColor(1)
+        cv.backgroundColor = Support().getUIColor(0)
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -35,7 +35,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! MenuBarCell
-       // cell.backgroundColor = Support().getUIColor(1)
+        cell.backgroundColor = Support().getUIColor(1)
         cell.labelView.text = labelName[indexPath.item]
         return cell
     }

@@ -9,7 +9,7 @@
 import UIKit
 import JavaScriptCore
 import BWWalkthrough
-class ProfileWebviewViewController: UIViewController, UIScrollViewDelegate, UIWebViewDelegate,BWWalkthroughViewControllerDelegate {
+class ProfileWebviewViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIWebViewDelegate,BWWalkthroughViewControllerDelegate {
     
     
     @IBOutlet weak var webview: UIWebView!
@@ -47,17 +47,8 @@ class ProfileWebviewViewController: UIViewController, UIScrollViewDelegate, UIWe
         view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
         view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar) // Set Height
     }
-    // End Set MenuBar
 
-  /*  func webViewDidStartLoad(webView: UIWebView) {
-        activityIndicator.startAnimating()
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        activityIndicator.stopAnimating()
-    }
-  */
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    override func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return nil
     }
     override func viewDidAppear(animated: Bool) {
